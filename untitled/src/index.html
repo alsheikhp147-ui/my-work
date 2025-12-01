@@ -1,0 +1,56 @@
+<h1 class="store-title">متجر عبدالله برويز عالم الشيخ للجوالات</h1>
+
+<div class="products">
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1695048139161-7b70b41b0d0b" alt="iPhone 15 Pro">
+    <h3>iPhone 15 Pro</h3>
+    <p>السعر: 4500 ريال</p>
+    <button onclick="addToCart('iPhone 15 Pro', 4500)">أضف للسلة</button>
+  </div>
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1678918884792-1e9465d9b91c" alt="Samsung S23 Ultra">
+    <h3>Samsung S23 Ultra</h3>
+    <p>السعر: 4100 ريال</p>
+    <button onclick="addToCart('Samsung S23 Ultra', 4100)">أضف للسلة</button>
+  </div>
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1588422333077-3c1830f3b9b3" alt="AirPods Pro">
+    <h3>AirPods Pro</h3>
+    <p>السعر: 850 ريال</p>
+    <button onclick="addToCart('AirPods Pro', 850)">أضف للسلة</button>
+  </div>
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1609838463472-4c1f1e47ca1a" alt="Apple Watch">
+    <h3>Apple Watch Series 9</h3>
+    <p>السعر: 1500 ريال</p>
+    <button onclick="addToCart('Apple Watch Series 9', 1500)">أضف للسلة</button>
+  </div>
+
+</div>
+
+<hr>
+
+<h2>🛒 السلة</h2>
+<ul id="cart"></ul>
+<h3 id="total">إجمالي السلة: 0 ريال</h3>
+
+<button id="checkoutBtn" onclick="openCheckout()" style="margin-top:20px;">إتمام الدفع</button>
+
+<!-- صفحة الدفع -->
+<div id="checkout" style="display:none; margin-top:30px;">
+  <h2>💳 صفحة الدفع</h2>
+
+  <input id="name" type="text" placeholder="الاسم الكامل" style="padding:10px; width:250px;"><br><br>
+  <input id="phone" type="text" placeholder="رقم الجوال" style="padding:10px; width:250px;"><br><br>
+  <input id="address" type="text" placeholder="العنوان" style="padding:10px; width:250px;"><br><br>
+
+  <h3 id="finalTotal"></h3>
+
+  <button onclick="confirmPayment()" style="background:green; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer;">
+    تأكيد الدفع
+  </button>
+</div>
